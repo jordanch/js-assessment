@@ -32,6 +32,7 @@ describe('arrays', function() {
     a.splice( 1, 0, 2 );
     a.push( 2 );
     a.push( 2 );
+    // [ 1, 2, 2, 3, 4, 2, 2 ]
 
     var result = arraysAnswers.removeWithoutCopy(a, 2);
 
