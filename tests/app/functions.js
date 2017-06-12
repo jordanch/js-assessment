@@ -110,10 +110,14 @@ describe('functions', function() {
     var a = Math.random();
     var b = Math.random();
     var c = Math.random();
+    var d = Math.random();
+    var e = Math.random();
     expect(functionsAnswers.partialUsingArguments(partialMe)(a, b, c)).to.eql(partialMe(a, b, c));
     expect(functionsAnswers.partialUsingArguments(partialMe, a)(b, c)).to.eql(partialMe(a, b, c));
     expect(functionsAnswers.partialUsingArguments(partialMe, a, b)(c)).to.eql(partialMe(a, b, c));
     expect(functionsAnswers.partialUsingArguments(partialMe, a, b, c)()).to.eql(partialMe(a, b, c));
+    expect(functionsAnswers.partialUsingArguments(partialMe, a, b, c)(d)).to.eql(partialMe(a, b, c, d));
+    expect(functionsAnswers.partialUsingArguments(partialMe, a, b, c)(d, e)).to.eql(partialMe(a, b, c, d, e));
   });
 
   it('you should be able to curry existing functions', function () {

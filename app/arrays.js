@@ -20,6 +20,7 @@ exports.arraysAnswers = {
   },
 
   // jordan check if there's a better way to do this.
+  // jordan i don't think modifying x is a good idea
   removeWithoutCopy: function(arr, item) {
     for (var x = 0; x < arr.length; x++) {
       if (arr[x] === item) {
